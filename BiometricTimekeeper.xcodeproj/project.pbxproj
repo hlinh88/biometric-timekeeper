@@ -11,6 +11,7 @@
 		1FC0BF962BBEFF39007759D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC0BF952BBEFF39007759D9 /* ContentView.swift */; };
 		1FC0BF982BBEFF3B007759D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC0BF972BBEFF3B007759D9 /* Assets.xcassets */; };
 		1FC0BF9B2BBEFF3B007759D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC0BF9A2BBEFF3B007759D9 /* Preview Assets.xcassets */; };
+		1FC0BFA32BBF0147007759D9 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC0BFA22BBF0147007759D9 /* MainVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		1FC0BF972BBEFF3B007759D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FC0BF9A2BBEFF3B007759D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1FC0BF9C2BBEFF3B007759D9 /* BiometricTimekeeper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BiometricTimekeeper.entitlements; sourceTree = "<group>"; };
+		1FC0BFA22BBF0147007759D9 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				1FC0BF932BBEFF39007759D9 /* BiometricTimekeeperApp.swift */,
 				1FC0BF952BBEFF39007759D9 /* ContentView.swift */,
+				1FC0BFA22BBF0147007759D9 /* MainVC.swift */,
 				1FC0BF972BBEFF3B007759D9 /* Assets.xcassets */,
 				1FC0BF9C2BBEFF3B007759D9 /* BiometricTimekeeper.entitlements */,
 				1FC0BF992BBEFF3B007759D9 /* Preview Content */,
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FC0BF962BBEFF39007759D9 /* ContentView.swift in Sources */,
+				1FC0BFA32BBF0147007759D9 /* MainVC.swift in Sources */,
 				1FC0BF942BBEFF39007759D9 /* BiometricTimekeeperApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +283,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Biometric Timekeeper requests to use camera";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -306,6 +311,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Biometric Timekeeper requests to use camera";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
