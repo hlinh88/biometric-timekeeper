@@ -14,13 +14,15 @@ class MainVC: NSViewController {
     private var permissionGranted = false
     private let captureSession = AVCaptureSession()
     private let sessionQueue = DispatchQueue(label: "sessionQueue")
-    private var previewLayer = AVCaptureVideoPreviewLayer()
+    var previewLayer = AVCaptureVideoPreviewLayer()
     var screenRect: CGRect! = NSScreen.main?.frame
     
     private var videoDataOutput = AVCaptureVideoDataOutput()
     
     private var drawings: [CAShapeLayer] = []
     
+    var requests = [VNRequest]()
+    var detectionLayer: CALayer? = nil
     
     override func viewDidLoad() {
         checkPermission()
@@ -30,11 +32,15 @@ class MainVC: NSViewController {
             
             self.setupCaptureSession()
             
+            self.setupLayers()
+            self.setupDetector()
+            
             self.captureSession.startRunning()
         }
     }
     
     override func viewWillAppear() {
+        self.setupLayers()
         self.clearDrawings()
     }
     
@@ -104,7 +110,12 @@ class MainVC: NSViewController {
         }
         
         let imageResultHandler = VNImageRequestHandler(cvPixelBuffer: image, orientation: .up)
-        try? imageResultHandler.perform([faceDetectionRequest])
+        //        try? imageResultHandler.perform([faceDetectionRequest])
+        do {
+            try imageResultHandler.perform(self.requests)
+        } catch {
+            print(error)
+        }
     }
     
     private func handleFaceDetectionResults(observedFaces: [VNFaceObservation]) {
@@ -149,6 +160,17 @@ extension MainVC: AVCaptureVideoDataOutputSampleBufferDelegate {
         
         detectFace(image: frame)
     }
+    
+    //    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+    //        guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
+    //        let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: .up, options: [:])
+    //
+    //        do {
+    //            try imageRequestHandler.perform(self.requests)
+    //        } catch {
+    //            print(error)
+    //        }
+    //    }
 }
 
 

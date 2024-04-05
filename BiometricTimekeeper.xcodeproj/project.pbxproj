@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F38E66D2BBFD9E100203F95 /* face detection.v1i.createml in Resources */ = {isa = PBXBuildFile; fileRef = 1F38E66C2BBFD9E100203F95 /* face detection.v1i.createml */; };
+		1F38E66F2BBFDA2200203F95 /* BiometricDetection.mlproj in Resources */ = {isa = PBXBuildFile; fileRef = 1F38E66E2BBFDA2200203F95 /* BiometricDetection.mlproj */; };
+		1F38E6712BBFE01B00203F95 /* Outcubator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1F38E6702BBFE01B00203F95 /* Outcubator.mlmodel */; };
 		1FC0BF942BBEFF39007759D9 /* BiometricTimekeeperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC0BF932BBEFF39007759D9 /* BiometricTimekeeperApp.swift */; };
 		1FC0BF962BBEFF39007759D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC0BF952BBEFF39007759D9 /* ContentView.swift */; };
 		1FC0BF982BBEFF3B007759D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC0BF972BBEFF3B007759D9 /* Assets.xcassets */; };
 		1FC0BF9B2BBEFF3B007759D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC0BF9A2BBEFF3B007759D9 /* Preview Assets.xcassets */; };
 		1FC0BFA32BBF0147007759D9 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC0BFA22BBF0147007759D9 /* MainVC.swift */; };
+		1FC0BFA92BBF1FA2007759D9 /* Detector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC0BFA82BBF1FA2007759D9 /* Detector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F38E66C2BBFD9E100203F95 /* face detection.v1i.createml */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "face detection.v1i.createml"; sourceTree = "<group>"; };
+		1F38E66E2BBFDA2200203F95 /* BiometricDetection.mlproj */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = BiometricDetection.mlproj; sourceTree = "<group>"; };
+		1F38E6702BBFE01B00203F95 /* Outcubator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Outcubator.mlmodel; sourceTree = "<group>"; };
 		1FC0BF902BBEFF39007759D9 /* BiometricTimekeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiometricTimekeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC0BF932BBEFF39007759D9 /* BiometricTimekeeperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricTimekeeperApp.swift; sourceTree = "<group>"; };
 		1FC0BF952BBEFF39007759D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -22,6 +29,7 @@
 		1FC0BF9A2BBEFF3B007759D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1FC0BF9C2BBEFF3B007759D9 /* BiometricTimekeeper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BiometricTimekeeper.entitlements; sourceTree = "<group>"; };
 		1FC0BFA22BBF0147007759D9 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		1FC0BFA82BBF1FA2007759D9 /* Detector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +62,13 @@
 		1FC0BF922BBEFF39007759D9 /* BiometricTimekeeper */ = {
 			isa = PBXGroup;
 			children = (
+				1F38E6702BBFE01B00203F95 /* Outcubator.mlmodel */,
+				1F38E66E2BBFDA2200203F95 /* BiometricDetection.mlproj */,
+				1F38E66C2BBFD9E100203F95 /* face detection.v1i.createml */,
 				1FC0BF932BBEFF39007759D9 /* BiometricTimekeeperApp.swift */,
 				1FC0BF952BBEFF39007759D9 /* ContentView.swift */,
 				1FC0BFA22BBF0147007759D9 /* MainVC.swift */,
+				1FC0BFA82BBF1FA2007759D9 /* Detector.swift */,
 				1FC0BF972BBEFF3B007759D9 /* Assets.xcassets */,
 				1FC0BF9C2BBEFF3B007759D9 /* BiometricTimekeeper.entitlements */,
 				1FC0BF992BBEFF3B007759D9 /* Preview Content */,
@@ -130,7 +142,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F38E66F2BBFDA2200203F95 /* BiometricDetection.mlproj in Resources */,
 				1FC0BF9B2BBEFF3B007759D9 /* Preview Assets.xcassets in Resources */,
+				1F38E66D2BBFD9E100203F95 /* face detection.v1i.createml in Resources */,
 				1FC0BF982BBEFF3B007759D9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +158,8 @@
 			files = (
 				1FC0BF962BBEFF39007759D9 /* ContentView.swift in Sources */,
 				1FC0BFA32BBF0147007759D9 /* MainVC.swift in Sources */,
+				1F38E6712BBFE01B00203F95 /* Outcubator.mlmodel in Sources */,
+				1FC0BFA92BBF1FA2007759D9 /* Detector.swift in Sources */,
 				1FC0BF942BBEFF39007759D9 /* BiometricTimekeeperApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
